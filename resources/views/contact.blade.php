@@ -6,9 +6,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -20,34 +18,8 @@
     @endif
 </head>
 <body class="bg-gray-100 dark:bg-gray-500 p-3">
-<h1 class="text-sm md:text-xl lg:text-4xl text-gray-500 dark:text-gray-100 md:text-amber-300 dark:md:text-red-300">Impressum</h1>
-<p class="text-lg lg:text-3xl mt-6 mb-6 md:mt-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-    pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
-<div class="space-y-3">
-    <p class="bg-pink-600 p-3 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-        pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
+<h1 class="text-xl md:text-2xl text-amber-500">Kontakt</h1>
 
-    <p class="bg-blue-600 p-3 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-        pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
-
-    <p class="bg-green-600 p-3 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-        pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
-
-
-</div>
-
-<div class="mt-6 flex flex-row">
-
-    <div class="bg-amber-400 flex-2 rounded-l-lg p-3">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda consectetur culpa dicta harum labore nemo similique voluptatum. Adipisci aperiam aspernatur eligendi esse iste, omnis placeat qui ullam voluptas voluptatem!</p>
-</div>
-
-    <div class="bg-teal-500 flex-1 rounded-r-lg p-3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda consectetur culpa dicta harum labore nemo similique voluptatum. Adipisci aperiam aspernatur eligendi esse iste, omnis placeat qui ullam voluptas voluptatem!</p>
-    </div>
-
-</div>
-
-
+<p class="text-lg">Ansprechpartner: {{$fname}} {{$sname}}</p>
 </body>
 </html>

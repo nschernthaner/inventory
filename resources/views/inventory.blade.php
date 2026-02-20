@@ -6,9 +6,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600" rel="stylesheet" />
+
 
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
@@ -20,34 +18,102 @@
     @endif
 </head>
 <body class="bg-gray-100 dark:bg-gray-500 p-3">
-<h1 class="text-sm md:text-xl lg:text-4xl text-gray-500 dark:text-gray-100 md:text-amber-300 dark:md:text-red-300">Impressum</h1>
-<p class="text-lg lg:text-3xl mt-6 mb-6 md:mt-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-    pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
-<div class="space-y-3">
-    <p class="bg-pink-600 p-3 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-        pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
+<h1 class="text-xl md:text-2xl text-amber-500">Inventar</h1>
+<p>Sie haben das Inventar {{ $id }} ausgewählt</p>
+{{--
+Achtung: Die Variable wird direkt ausgegeben. Falls eine Variable vom Benutzer stammt, muss der Inhalt überprüft werden
+bzw. darf der Inhalt niemals direkt ausgegeben werden.
+<p>Info: {!! $info !!}</p>
+--}}
+<p>Info: {{$info}}</p>
 
-    <p class="bg-blue-600 p-3 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-        pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
-
-    <p class="bg-green-600 p-3 rounded-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae dolorum eum facilis modi officiis omnis
-        pariatur ut voluptatem voluptatum? Consequatur ducimus ea fugit iusto modi odit provident soluta totam.</p>
-
-
-</div>
-
-<div class="mt-6 flex flex-row">
-
-    <div class="bg-amber-400 flex-2 rounded-l-lg p-3">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda consectetur culpa dicta harum labore nemo similique voluptatum. Adipisci aperiam aspernatur eligendi esse iste, omnis placeat qui ullam voluptas voluptatem!</p>
-</div>
-
-    <div class="bg-teal-500 flex-1 rounded-r-lg p-3">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias assumenda consectetur culpa dicta harum labore nemo similique voluptatum. Adipisci aperiam aspernatur eligendi esse iste, omnis placeat qui ullam voluptas voluptatem!</p>
-    </div>
-
-</div>
-
-
+<ul class="list-disc">
+    <li class="ml-6">
+        items
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">ts</li>
+            <li class="ml-6">invnumber</li>
+            <li class="ml-6">room_id</li>
+            <li class="ml-6">school_id</li>
+            <li class="ml-6">title</li>
+            <li class="ml-6">comment</li>
+            <li class="ml-6">category_id</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        rooms
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">title</li>
+            <li class="ml-6">school_id</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        schools
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">title</li>
+            <li class="ml-6">address</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        categories
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">title</li>
+            <li class="ml-6">school_id</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        tags
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">title</li>
+            <li class="ml-6">school_id</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        items_tags
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">item_id</li>
+            <li class="ml-6">tag_id</li>
+            <li class="ml-6">ts</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        users
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">name</li>
+            <li class="ml-6">email</li>
+            <li class="ml-6">password</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        groups
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">name</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        users_groups
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">user_id</li>
+            <li class="ml-6">group_id</li>
+        </ul>
+    </li>
+    <li class="ml-6">
+        personal_access_tokens
+        <ul class="list-disc">
+            <li class="ml-6">id</li>
+            <li class="ml-6">abilities</li>
+            <li class="ml-6">name</li>
+        </ul>
+    </li>
+</ul>
 </body>
 </html>
