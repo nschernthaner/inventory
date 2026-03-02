@@ -28,7 +28,8 @@ class DatabaseSeeder extends Seeder
         School::factory(100)->create();
 
         $this->call([
-            SchoolSeeder::class
+            SchoolSeeder::class,
+            ItemSeeder::class,
         ]);
         }
 
