@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
@@ -34,3 +35,5 @@ Route::get('/contact', [PageController::class, 'contact'])->name('pages.contact'
 
 // Aufruf mit /inventory/1 => in der Funktion ist ein Parameter id mit dem Inhalt 1 vorhanden
 Route::get('/inventory/{id}', [PageController::class, 'inventory']);
+
+Route::get('/items', [ItemController::class, 'index']);
