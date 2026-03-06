@@ -8,6 +8,9 @@ class RandomController extends Controller
 {
     public function select()
     {
-        return random_int(1, 9);
+        $stud = random_int(1, 19);
+        return view('student.random', [
+           'stud' => $stud
+        ]);
     }
 }
