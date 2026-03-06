@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\RandomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,3 +38,5 @@ Route::get('/contact', [PageController::class, 'contact'])->name('pages.contact'
 Route::get('/inventory/{id}', [PageController::class, 'inventory']);
 
 Route::get('/items', [ItemController::class, 'index']);
+
+Route::get('/student', [RandomController::class, 'select']);
