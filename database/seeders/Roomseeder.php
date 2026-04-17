@@ -14,8 +14,8 @@ class Roomseeder extends Seeder
     public function run(): void
     {
         $kat1 = new Room();
-        $kat1->title="Raum 4BHK";
-        $kat1->school_id= 101;
+        $kat1->name = "Raum 4BHK";
+        $kat1->school_id = 1;
         $kat1->save();
     }
 }

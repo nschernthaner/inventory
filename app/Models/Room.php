@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Room extends Model
 {
-    public $timestamps=false;
+    public $timestamps = false;
+
+    protected $fillable =[
+        'title',
+        'school_id'
+    ];
 }
